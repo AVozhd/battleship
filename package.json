@@ -46,6 +46,10 @@
     "react-app-polyfill": "^1.0.1",
     "react-dev-utils": "^9.0.1",
     "react-dom": "^16.8.6",
+    "react-redux": "^7.1.0",
+    "redux": "^4.0.2",
+    "redux-saga": "^1.0.5",
+    "redux-thunk": "^2.3.0",
     "resolve": "1.10.0",
     "sass-loader": "^7.1.0",
     "semver": "6.0.0",
@@ -83,7 +87,8 @@
     "@babel/plugin-transform-react-jsx-source": "^7.5.0",
     "@babel/preset-env": "^7.5.2",
     "node-sass": "^4.12.0",
-    "prettier": "^1.18.2"
+    "prettier": "^1.18.2",
+    "redux-devtools-extension": "^2.13.8"
   },
   "jest": {
     "collectCoverageFrom": [
@@ -131,6 +136,9 @@
     ]
   },
   "babel": {
-    "presets": ["@babel/env", "@babel/react"]
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
   }
 }
