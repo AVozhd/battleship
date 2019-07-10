@@ -1,8 +1,17 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import App from "./components/App";
+import { render } from "react-dom";
 import * as serviceWorker from "./serviceWorker";
 
-ReactDOM.render(<App />, document.getElementById("root"));
+document.addEventListener("DOMContentLoaded", () => {
+  const App = React.lazy(async () => await import("./components/App"));
+  return Promise.resolve(
+    render(
+      <React.Suspense fallback={<React.Fragment />}>
+        <App />
+      </React.Suspense>,
+      document.getElementById("root")
+    )
+  );
+});
 
 serviceWorker.unregister();

@@ -2,8 +2,8 @@ import { createStore, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
 import createSagaMiddleware from "redux-saga";
 import thunk from "redux-thunk";
-import reducer from "@/components/Landing/store/reducer";
-import sagas from "@/components/Landing/store/sagaGenerator";
+import reducer from "./reducer";
+import saga from "./saga";
 
 const sagaMiddleware = createSagaMiddleware();
 
@@ -12,6 +12,6 @@ const store = createStore(
   composeWithDevTools(applyMiddleware(sagaMiddleware, thunk))
 );
 
-sagas.forEach(saga => sagaMiddleware.run(saga));
+saga.forEach(handler => sagaMiddleware.run(handler));
 
 export default store;
