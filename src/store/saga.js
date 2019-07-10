@@ -1,4 +1,4 @@
-import { call, put, takeLatest, select, delay, all } from "redux-saga/effects";
+import { takeLatest } from "redux-saga/effects";
 import * as ACTION from "./actions";
 
 function* initialAction() {
@@ -6,7 +6,7 @@ function* initialAction() {
 }
 
 export default [
-  function* () {
-    yield takeLatest(ACTION.INITIAL_ACTION, initialAction)
+  function*() {
+    yield takeLatest(ACTION.INITIAL_ACTION, initialAction);
   }
 ];
