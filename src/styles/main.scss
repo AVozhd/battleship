@@ -2,6 +2,9 @@
 @import "reset/reset.scss";
 @import "reset/typography.scss";
 
+@import "header.scss";
+@import "footer.scss";
+
 html, body {
   min-height: 100vh;
   min-width: 100%;
@@ -20,10 +23,4 @@ html, body {
   width: fit-content;
   height: fit-content;
   transform: translate(-50%, -50%);
-}
-
-.test-div {
-  min-height: 100px;
-  min-width: 100px;
-  background-color: red;
 }
